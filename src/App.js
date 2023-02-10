@@ -20,7 +20,7 @@ export default function App() {
 
   return (
     <>
-      <Cabecalho />
+      <Cabecalho nomeUsuario={'Joana Fonseca Gomes'} />
       <main className={estilos.container}>
         <Menu />
         <div className={estilos.wrapper}>
