@@ -22,3 +22,12 @@ describe('Validando o componente Formulario', () => {
     expect(campoTexto).toHaveValue(50);
   });
 });
+
+test('Ao clicar no botão deve executar a função realizar transação', () => {
+  const realizarTransacao = jest.fn();
+
+  render(<Formulario realizarTransacao={realizarTransacao} />);
+  const botao = screen.getByRole('button');
+  userEvent.click(botao);
+  expect(realizarTransacao).toBeCalledTimes(1);
+});
